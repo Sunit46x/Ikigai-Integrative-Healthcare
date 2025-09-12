@@ -391,9 +391,7 @@ a {
   transition: color var(--duration-fast) var(--ease-standard);
 }
 
-a:hover {
-  color: var(--color-primary-hover);
-}
+
 
 code,
 pre {
@@ -441,14 +439,8 @@ pre code {
   box-shadow: var(--focus-ring);
 }
 
-.btn--primary {
-  background: var(--color-primary);
-  color: var(--color-btn-primary-text);
-}
 
-.btn--primary:hover {
-  background: var(--color-primary-hover);
-}
+
 
 .btn--primary:active {
   background: var(--color-primary-active);
@@ -911,10 +903,17 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-lite-button-hover);
-  outline: 2px solid var(--color-primary-green);
-  outline-offset: 2px;
+    background: var(--color-lite-button-hover);
+  border-color: var(--color-lite-button-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  
+  
 }
+.btn.btn--primary {
+  font-weight: bold; /* or 700 for extra bold */
+}
+
 
 /* Container */
 .container {
@@ -961,7 +960,7 @@ a:focus {
 
 @media (max-width: 768px) {
   .logo {
-    max-height: 32px;
+    max-height: 40px;
   }
 }
 
@@ -974,7 +973,7 @@ a:focus {
 
 @media (max-width: 768px) {
   .nav-brand h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -1895,7 +1894,7 @@ textarea.form-control {
   }
 
   .nav-brand h2 {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -2520,7 +2519,6 @@ body {
     max-width: 400px;
   }
 }
-
 .interest-btn {
   display: inline-block;
   background: #3b7a57;
@@ -2530,21 +2528,6 @@ body {
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.interest-btn:hover {
-  background: #444;
-  transform: translateY(-2px);
-}
-
-
-.feature img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 15px;
 }
 
 /* ===============================
@@ -2634,39 +2617,49 @@ body {
   /* pushes text evenly if content is shorter */
 }
 
-/* ===============================
-   Responsive Adjustments
-   =============================== */
-
-/* Tablets - 2 per row */
-@media (max-width: 992px) {
-
-  .pillars-grid,
-  .focus-areas-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pillars-section h2,
-  .focus-areas-section h2 {
-    font-size: 1.5rem;
-  }
+/* Carousel Styles */
+.carousel-container {
+    overflow: hidden;
+    position: relative;
 }
 
-/* Mobile - 1 per row */
-@media (max-width: 600px) {
+.carousel {
+  display: flex;
+  gap: 2rem; /* smaller gap, adjust as needed */
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 
-  .pillars-grid,
-  .focus-areas-grid {
-    grid-template-columns: 1fr;
-  }
+  scroll-snap-type: x mandatory; /* enable snapping */
+  justify-content: center;       /* center items if not scrolling */
+  padding: 0 1rem;               /* optional padding */
+}
 
-  .pillar-card,
-  .focus-area-card {
-    padding: 15px;
-  }
+.carousel > * {
+  scroll-snap-align: center; /* snap each card to center */
+  flex: 0 0 auto;            /* prevent shrinking */
+}
 
-  .pillar-card img,
-  .focus-area-card img {
-    height: auto;
-  }
+
+.card {
+    flex: 0 0 100%; /* Default: 1 card per view */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Tablet View */
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 48%; /* 2 cards per view */
+    }
+}
+
+/* Desktop View */
+@media (min-width: 1024px) {
+    .card {
+        flex: 0 0 30%; /* 3 cards per view */
+    }
 }
