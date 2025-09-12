@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize application
     initializeApp();
+    initServicesCarousel();
 });
 
 // Main initialization function
@@ -25,6 +26,72 @@ function initializeApp() {
     } catch (error) {
         console.error('Error initializing application:', error);
     }
+}
+
+// Mobile-only carousel for services section
+function initServicesCarousel() {
+    const carousel = document.querySelector('.services .carousel');
+    const track = carousel?.querySelector('.carousel-track');
+    const cards = track?.children;
+    const dotsContainer = carousel?.querySelector('.carousel-dots');
+    if (!carousel || !track || !cards || !dotsContainer) return;
+
+    let currentIndex = 0;
+    const totalCards = cards.length;
+
+    // Create dots
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < totalCards; i++) {
+        const dot = document.createElement('span');
+        dot.classList.add('carousel-dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel();
+        });
+        dotsContainer.appendChild(dot);
+    }
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    // Infinite swipe support for mobile
+    let startX = null;
+    track.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+    track.addEventListener('touchend', (e) => {
+        if (startX === null) return;
+        const endX = e.changedTouches[0].clientX;
+        if (endX - startX > 50) {
+            // Swipe right (previous)
+            currentIndex = (currentIndex - 1 + totalCards) % totalCards;
+            updateCarousel();
+        } else if (startX - endX > 50) {
+            // Swipe left (next)
+            currentIndex = (currentIndex + 1) % totalCards;
+            updateCarousel();
+        }
+        startX = null;
+    });
+
+    // Only enable carousel on mobile devices
+    function checkMobile() {
+        if (window.innerWidth <= 768) {
+            updateCarousel();
+            dotsContainer.style.display = 'flex';
+        } else {
+            track.style.transform = 'none';
+            dotsContainer.style.display = 'none';
+        }
+    }
+    window.addEventListener('resize', checkMobile);
+    checkMobile();
 }
 
 // Enhanced navigation between sections

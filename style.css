@@ -221,6 +221,60 @@
   }
 }
 
+/* Mobile Carousel Styles for Therapeutic Focus Areas */
+@media (max-width: 768px) {
+  .focus-areas-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .focus-areas-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+  .focus-area-card {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .focus-areas-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 0 0;
+    gap: 8px;
+  }
+  .focus-areas-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .focus-areas-dot.active {
+    background: #21908d;
+  }
+}
+
+@media (min-width: 769px) {
+  .focus-areas-dots {
+    display: none !important;
+  }
+  .focus-areas-track {
+    display: flex;
+    gap: 2rem;
+    transform: none !important;
+  }
+  .focus-area-card {
+    min-width: 0;
+    flex: 1;
+    margin: 0 1rem;
+  }
+}
+
 /* Data attribute for manual theme switching */
 [data-color-scheme="dark"] {
   /* RGB versions for opacity control (dark mode) */
@@ -391,9 +445,7 @@ a {
   transition: color var(--duration-fast) var(--ease-standard);
 }
 
-a:hover {
-  color: var(--color-primary-hover);
-}
+
 
 code,
 pre {
@@ -911,10 +963,10 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--color-lite-button-hover);
-  outline: 2px solid var(--color-primary-green);
+  outline: 2px solid green ;
   outline-offset: 2px;
 }
+
 
 /* Container */
 .container {
@@ -967,14 +1019,14 @@ a:focus {
 
 .nav-brand h2 {
   color: var(--color-primary-green);
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   margin: 0;
   font-weight: var(--font-weight-semibold);
 }
 
 @media (max-width: 768px) {
   .nav-brand h2 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -1895,7 +1947,7 @@ textarea.form-control {
   }
 
   .nav-brand h2 {
-    font-size: 0.9rem;
+    font-size: 1.27rem;
   }
 }
 
@@ -2529,13 +2581,10 @@ body {
   font-weight: 600;
   border-radius: 8px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease;  <-- remove this */
 }
 
-.interest-btn:hover {
-  background: #444;
-  transform: translateY(-2px);
-}
+
 
 
 .feature img {
@@ -2667,5 +2716,64 @@ body {
   .pillar-card img,
   .focus-area-card img {
     height: 140px;
+  }
+}
+
+
+/* first carusal */
+/* Mobile Carousel Styles for Services Section */
+@media (max-width: 768px) {
+  .services .carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .services .carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    width: 100%;
+  }
+  .services .card {
+    min-width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin: 0;
+  }
+  .carousel-btn {
+    display: none !important;
+  }
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0 0 0;
+    gap: 8px;
+  }
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    transition: background 0.3s;
+    cursor: pointer;
+  }
+  .carousel-dot.active {
+    background: #21908d;
+  }
+}
+
+@media (min-width: 769px) {
+  .services .carousel-btn {
+    display: none !important;
+  }
+  .services .carousel-track {
+    display: flex;
+    gap: 2rem;
+    transform: none !important;
+  }
+  .services .card {
+    min-width: 0;
+    flex: 1;
+    margin: 0 1rem;
   }
 }
