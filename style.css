@@ -2083,19 +2083,6 @@ iframe[name="hidden_iframe"] {
   }
 }
 
-/* Global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-}
-
-body {
-  color: #000;
-  background: #f6fbf9;
-  line-height: 1.6;
-}
 
 /* Section */
 .approach {
