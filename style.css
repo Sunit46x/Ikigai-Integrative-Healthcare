@@ -221,60 +221,6 @@
   }
 }
 
-/* Mobile Carousel Styles for Therapeutic Focus Areas */
-@media (max-width: 768px) {
-  .focus-areas-carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  .focus-areas-track {
-    display: flex;
-    transition: transform 0.3s ease;
-    width: 100%;
-  }
-  .focus-area-card {
-    min-width: 100%;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    margin: 0;
-  }
-  .focus-areas-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 16px 0 0 0;
-    gap: 8px;
-  }
-  .focus-areas-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #ccc;
-    transition: background 0.3s;
-    cursor: pointer;
-  }
-  .focus-areas-dot.active {
-    background: #21908d;
-  }
-}
-
-@media (min-width: 769px) {
-  .focus-areas-dots {
-    display: none !important;
-  }
-  .focus-areas-track {
-    display: flex;
-    gap: 2rem;
-    transform: none !important;
-  }
-  .focus-area-card {
-    min-width: 0;
-    flex: 1;
-    margin: 0 1rem;
-  }
-}
-
 /* Data attribute for manual theme switching */
 [data-color-scheme="dark"] {
   /* RGB versions for opacity control (dark mode) */
@@ -1288,22 +1234,9 @@ a:focus {
   font-style: italic;
 }
 
-/* Testimonials Section */
-.testimonials-section {
-  padding: var(--space-2xl) 0;
-}
 
-.testimonials-section h2 {
-  text-align: center;
-  color: var(--color-primary-green);
-  margin-bottom: var(--space-2xl);
-}
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-lg);
-}
+
 
 .testimonial-card {
   background: var(--color-background-primary);
@@ -1900,7 +1833,7 @@ textarea.form-control {
 
   .hero,
   .intro-section,
-  .testimonials-section,
+  
   .pillars-section,
   .focus-areas-section,
   .plans-hero {
@@ -2445,8 +2378,7 @@ body {
 
 .mustang-section {
   padding: 4rem 8%;
-  background: #f7fdf7;
-
+  background: #fff;
 }
 
 .mustang-section h2 {
@@ -2464,10 +2396,10 @@ body {
 }
 
 .charger-card {
-  background: #ffffff;
+  background: #f8f9f9;
   padding: 1.8rem;
   border-radius: 12px;
-  box-shadow: #000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .charger-card h3 {
@@ -2718,48 +2650,46 @@ body {
   .focus-area-card img {
     height: 140px;
   }
-
-  /* Hide grid layouts and show carousels for mobile */
-  .pillars-grid,
-  .focus-areas-grid {
-    display: none !important;
-  }
-  .pillars-carousel,
-  .focus-areas-carousel {
-    display: block !important;
-  }
-}
-
-/* Hide carousels by default on desktop */
-.pillars-carousel,
-.focus-areas-carousel {
-  display: none;
 }
 
 
+.services {
+  padding: 4rem 5%;
+  text-align: center;
+}
 
-/* first carusal */
-/* Mobile Carousel Styles for Services Section */
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.card img {
+  width: 160px;
+  margin-bottom: 15px;
+}
+
+/* 📱 Mobile Carousel */
 @media (max-width: 768px) {
   .services .carousel {
     position: relative;
     overflow: hidden;
     width: 100%;
   }
+
   .services .carousel-track {
     display: flex;
-    transition: transform 0.3s ease;
-    width: 100%;
+    justify-content: center; /* ✅ Center track */
+    transition: transform 0.4s ease-in-out;
   }
+
   .services .card {
     min-width: 100%;
-    box-sizing: border-box;
     flex-shrink: 0;
-    margin: 0;
   }
-  .carousel-btn {
-    display: none !important;
-  }
+
   .carousel-dots {
     display: flex;
     justify-content: center;
@@ -2767,6 +2697,7 @@ body {
     margin: 16px 0 0 0;
     gap: 8px;
   }
+
   .carousel-dot {
     width: 10px;
     height: 10px;
@@ -2775,77 +2706,28 @@ body {
     transition: background 0.3s;
     cursor: pointer;
   }
+
   .carousel-dot.active {
     background: #21908d;
   }
 }
 
+/* 💻 Desktop */
 @media (min-width: 769px) {
-  .services .carousel-btn {
-    display: none !important;
-  }
   .services .carousel-track {
     display: flex;
+    justify-content: center; /* ✅ Center track for desktop */
     gap: 2rem;
     transform: none !important;
   }
+
   .services .card {
     min-width: 0;
     flex: 1;
     margin: 0 1rem;
   }
-}
-/* Footer */
-.porsche-footer {
-  font-size: 0.9rem;
-  padding: 1.5rem 8%;
-  border-top: 1px solid #ddd;
-  color: #444;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #f7fdf7;
-  flex-wrap: wrap;
-}
 
-.porsche-footer .logo {
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.porsche-footer a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.porsche-footer a:hover {
-  color: #3b7a57;
-}
-
-/* Social Media Icons */
-.footer-right a {
-  margin-left: 12px;
-  font-size: 1.2rem;
-  color: #444;
-  transition: all 0.3s ease;
-}
-
-.footer-right a:hover {
-  color: #3b7a57;
-  transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .porsche-footer {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-right {
-    margin-top: 1rem;
+  .carousel-dots {
+    display: none;
   }
 }

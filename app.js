@@ -863,3 +863,95 @@ function showSuccessMessage() {
   document.getElementById("contactForm").style.display = "none";
   document.getElementById("successMessage").classList.remove("hidden");
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const cards = Array.from(track.children);
+  const dotsContainer = document.querySelector(".carousel-dots");
+
+  let index = 0;
+
+  // Clone first and last card for infinite effect
+  const firstClone = cards[0].cloneNode(true);
+  const lastClone = cards[cards.length - 1].cloneNode(true);
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, cards[0]);
+
+  const allSlides = document.querySelectorAll(".card");
+  let currentIndex = 1;
+  const slideWidth = allSlides[0].clientWidth;
+
+  track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+
+  // Create dots
+  for (let i = 0; i < cards.length; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("carousel-dot");
+    if (i === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+  }
+  const dots = document.querySelectorAll(".carousel-dot");
+
+  const setActiveDot = () => {
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[(currentIndex - 1 + cards.length) % cards.length].classList.add("active");
+  };
+
+  const moveToSlide = () => {
+    track.style.transition = "transform 0.4s ease-in-out";
+    track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+  };
+
+  track.addEventListener("transitionend", () => {
+    if (allSlides[currentIndex].isEqualNode(firstClone)) {
+      track.style.transition = "none";
+      currentIndex = 1;
+      track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+    }
+    if (allSlides[currentIndex].isEqualNode(lastClone)) {
+      track.style.transition = "none";
+      currentIndex = cards.length;
+      track.style.transform = `translateX(${-slideWidth * currentIndex}px)`;
+    }
+    setActiveDot();
+  });
+
+  // Swipe functionality
+  let startX, isDragging = false;
+
+  track.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+  });
+
+  track.addEventListener("touchend", e => {
+    if (!isDragging) return;
+    let endX = e.changedTouches[0].clientX;
+    let diff = startX - endX;
+
+    if (diff > 50) {
+      currentIndex++;
+      moveToSlide();
+    } else if (diff < -50) {
+      currentIndex--;
+      moveToSlide();
+    }
+    isDragging = false;
+  });
+
+  // Dots click
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      currentIndex = i + 1;
+      moveToSlide();
+    });
+  });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    const newWidth = allSlides[0].clientWidth;
+    track.style.transition = "none";
+    track.style.transform = `translateX(${-newWidth * currentIndex}px)`;
+  });
+});
