@@ -329,7 +329,6 @@ body {
 
 /* Footer */
 .porsche-footer {
-  text-align: center;
   font-size: 0.9rem;
   padding: 1.5rem 8%;
   border-top: 1px solid #ddd;
@@ -338,44 +337,47 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #f7fdf7;
+  flex-wrap: wrap;
+}
+
+.porsche-footer .logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
 
 .porsche-footer a {
   color: #000;
   text-decoration: none;
-  font-weight: 500;
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .camaro-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .lamborghini-cta {
-    flex-direction: column;
-    text-align: center;
-    
-  }
-
-  .lamborghini-image img {
-    max-width: 400px;
-  }
-}
-
-.interest-btn {
-  display: inline-block;
-  background: #3b7a57;
-  color: #fff;
-  padding: 0.6rem 1.3rem;
-  font-size: 1rem;
   font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.porsche-footer a:hover {
+  color: #3b7a57;
+}
+
+/* Social Media Icons */
+.footer-right a {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  color: #444;
   transition: all 0.3s ease;
 }
 
-.interest-btn:hover {
-  background: #444;
+.footer-right a:hover {
+  color: #3b7a57;
   transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .porsche-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-top: 1rem;
+  }
 }

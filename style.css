@@ -2445,7 +2445,8 @@ body {
 
 .mustang-section {
   padding: 4rem 8%;
-  background: #fff;
+  background: #f7fdf7;
+
 }
 
 .mustang-section h2 {
@@ -2463,10 +2464,10 @@ body {
 }
 
 .charger-card {
-  background: #f8f9f9;
+  background: #ffffff;
   padding: 1.8rem;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: #000;
 }
 
 .charger-card h3 {
@@ -2717,7 +2718,24 @@ body {
   .focus-area-card img {
     height: 140px;
   }
+
+  /* Hide grid layouts and show carousels for mobile */
+  .pillars-grid,
+  .focus-areas-grid {
+    display: none !important;
+  }
+  .pillars-carousel,
+  .focus-areas-carousel {
+    display: block !important;
+  }
 }
+
+/* Hide carousels by default on desktop */
+.pillars-carousel,
+.focus-areas-carousel {
+  display: none;
+}
+
 
 
 /* first carusal */
@@ -2775,5 +2793,59 @@ body {
     min-width: 0;
     flex: 1;
     margin: 0 1rem;
+  }
+}
+/* Footer */
+.porsche-footer {
+  font-size: 0.9rem;
+  padding: 1.5rem 8%;
+  border-top: 1px solid #ddd;
+  color: #444;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7fdf7;
+  flex-wrap: wrap;
+}
+
+.porsche-footer .logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.porsche-footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.porsche-footer a:hover {
+  color: #3b7a57;
+}
+
+/* Social Media Icons */
+.footer-right a {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+.footer-right a:hover {
+  color: #3b7a57;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .porsche-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-top: 1rem;
   }
 }
