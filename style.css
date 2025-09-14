@@ -601,7 +601,6 @@ a:focus {
   }
 }
 
-
 /* Section */
 .approach {
   text-align: center;
@@ -622,7 +621,7 @@ a:focus {
   color: #333;
 }
 
-/* Features Grid */
+/* Features Grid - Default (Desktop) */
 .features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -643,12 +642,6 @@ a:focus {
   transform: translateY(-5px);
 }
 
-.feature i {
-  font-size: 2rem;
-  color: #000;
-  margin-bottom: 1rem;
-}
-
 .feature h3 {
   font-size: 1.2rem;
   font-weight: 600;
@@ -660,16 +653,34 @@ a:focus {
   color: #444;
 }
 
-/* Responsive */
+.feature img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* Tablet View */
 @media (max-width: 1024px) {
   .features {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile Carousel */
 @media (max-width: 768px) {
   .features {
-    grid-template-columns: 1fr;
+    display: flex;                 /* Flexbox instead of grid */
+    overflow-x: auto;              /* Horizontal scroll */
+    scroll-snap-type: x mandatory; /* Snap effect */
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .feature {
+    flex: 0 0 100%;                /* One card at a time */
+    scroll-snap-align: center;     /* Snap to center */
+    box-sizing: border-box;
   }
 
   .approach h2 {
@@ -678,6 +689,15 @@ a:focus {
 
   .subtitle {
     font-size: 0.95rem;
+  }
+
+  /* Hide scrollbar */
+  .features::-webkit-scrollbar {
+    display: none;
+  }
+  .features {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
@@ -912,11 +932,18 @@ a:focus {
 }
 
 .charger-card {
-  background: #f8f9f9;
+  background: #ffffff;
   padding: 1.8rem;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
 }
+
+.charger-card:hover {
+  transform: translateY(-8px); /* lift upward */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12); /* stronger shadow when lifted */
+}
+
 
 .charger-card h3 {
   font-size: 1.2rem;
