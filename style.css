@@ -606,6 +606,7 @@ a:focus {
 .approach {
   text-align: center;
   padding: 4rem 8%;
+  background-color: #f7fdf7;
 }
 
 .approach h2 {
@@ -699,27 +700,25 @@ a:focus {
   font-size: 1rem;
   color: #444;
 }
-
-/* Grid Layout */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  justify-content: center;
 }
 
+/* Cards styling */
 .testimonial-card {
   background: #fff;
   padding: 2rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .testimonial-card img {
   width: 100%;
-  max-width: 200px;
-  /* Bigger size */
+  max-width: 225px;
   border-radius: 12px;
   margin: 0 auto 1.2rem;
   display: block;
@@ -741,30 +740,42 @@ a:focus {
   font-size: 0.95rem;
   color: #333;
   text-align: left;
-  /* readable text */
 }
 
-/* Center last 2 cards */
-.testimonial-grid .testimonial-card:nth-last-child(2),
-.testimonial-grid .testimonial-card:last-child {
-  justify-self: center;
+/* ✅ Desktop */
+@media (min-width: 1025px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+/* ✅ Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
   .testimonial-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  /* When 2-column layout, remove special centering */
-  .testimonial-grid .testimonial-card {
-    justify-self: stretch;
-  }
 }
 
+/* ✅ Mobile - Carousel */
 @media (max-width: 768px) {
   .testimonial-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem;
+    -webkit-overflow-scrolling: touch; /* smooth on iOS */
+  }
+
+  .testimonial-card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    margin: 0 auto;
+  }
+
+  /* Hide scrollbar for a clean look */
+  .testimonial-grid::-webkit-scrollbar {
+    display: none;
   }
 }
 
@@ -883,7 +894,7 @@ a:focus {
 
 .mustang-section {
   padding: 4rem 8%;
-  background: #fff;
+  background: #f7fdf7;
 }
 
 .mustang-section h2 {
@@ -976,23 +987,6 @@ a:focus {
   border-radius: 10px;
 }
 
-/* Footer */
-.porsche-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  padding: 1.5rem 8%;
-  border-top: 1px solid #ddd;
-  color: #444;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.porsche-footer a {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-}
 
 /* Responsive */
 @media (max-width: 992px) {
@@ -1157,7 +1151,6 @@ a:focus {
   }
 }
 
-
 .services {
   padding: 4rem 5%;
   text-align: center;
@@ -1186,8 +1179,6 @@ a:focus {
 
   .services .carousel-track {
     display: flex;
-    justify-content: center;
-    /* ✅ Center track */
     transition: transform 0.4s ease-in-out;
   }
 
@@ -1200,7 +1191,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 16px 0 0 0;
+    margin-top: 16px;
     gap: 8px;
   }
 
@@ -1218,12 +1209,11 @@ a:focus {
   }
 }
 
-/* 💻 Desktop */
+/* 💻 Desktop (show all cards side by side) */
 @media (min-width: 769px) {
   .services .carousel-track {
     display: flex;
     justify-content: center;
-    /* ✅ Center track for desktop */
     gap: 2rem;
     transform: none !important;
   }
@@ -1238,3 +1228,68 @@ a:focus {
     display: none;
   }
 }
+
+
+/* Footer */
+.porsche-footer {
+  font-size: 0.9rem;
+  padding: 1.5rem 8%;
+  border-top: 1px solid #ddd;
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7fdf7;
+  flex-wrap: wrap;
+}
+
+.porsche-footer .logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.porsche-footer a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.porsche-footer a:hover {
+  color: #3b7a57;
+}
+
+/* Social Media Icons */
+.footer-right a {
+  margin-left: 12px;
+  font-size: 1.5rem;
+  color: #000000;
+  transition: all 0.5s ease;
+}
+
+.footer-right a:hover {
+  color: #3a8f60;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .porsche-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-top: 1.35rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* program css */
