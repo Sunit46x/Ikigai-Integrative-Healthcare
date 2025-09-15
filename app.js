@@ -956,57 +956,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// const track = document.querySelector(".carousel-track");
-// const dots = document.querySelectorAll(".carousel-dots button");
-
-// dots.forEach((dot, index) => {
-//   dot.addEventListener("click", () => {
-//     track.style.transform = `translateX(-${index * 100}%)`;
-//     dots.forEach(d => d.classList.remove("active"));
-//     dot.classList.add("active");
-//   });
-// });
-
-
-// const track = document.querySelector(".carousel-track");
-// const dots = document.querySelectorAll(".carousel-dots button");
-
-// let index = 0;
-// let totalSlides = dots.length;
-// let interval = null;
-
-// // ✅ Function to update slide + dots
-// function updateCarousel() {
-//   track.style.transform = `translateX(-${index * 100}%)`;
-//   dots.forEach((d, i) => d.classList.toggle("active", i === index));
-// }
-
-// // ✅ Dot click handler
-// dots.forEach((dot, i) => {
-//   dot.addEventListener("click", () => {
-//     index = i;
-//     updateCarousel();
-//     resetAutoSlide();
-//   });
-// });
-
-// // ✅ Auto-slide every 4s
-// function autoSlide() {
-//   interval = setInterval(() => {
-//     index = (index + 1) % totalSlides;
-//     updateCarousel();
-//   }, 4000); // 4 seconds
-// }
-
-// // ✅ Reset auto-slide when manually clicked
-// function resetAutoSlide() {
-//   clearInterval(interval);
-//   autoSlide();
-// }
-
-// // ✅ Initialize
-// updateCarousel();
-// autoSlide();
 
 
 
