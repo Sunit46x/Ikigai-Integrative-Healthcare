@@ -664,6 +664,29 @@ a:focus {
     scrollbar-width: none;
   }
 }
+/* Dots - Mobile Only */
+@media (max-width: 768px) {
+  .sunit {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+  }
+
+  .sunit button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .sunit button.active {
+    background: #333; /* Active dot color */
+  }
+}
 
 
 .testimonials {
@@ -763,26 +786,34 @@ a:focus {
   }
 }
 
-@media (max-width: 768px) {
-  .testimonial-dots {
-    text-align: center;
-    margin-top: 1rem;
-  }
+/* 
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 8px;
+} */
 
-  .testimonial-dots .dot {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin: 0 6px;
-    background: #ccc;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-    cursor: pointer;
-  }
 
-  .testimonial-dots .dot.active {
-    background: #4caf50;
-  }
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.carousel-dots button.active {
+  background-color: #21908d; 
+  transform: scale(1.2);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
 

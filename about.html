@@ -83,7 +83,40 @@
                     overall health.</p>
             </div>
         </div>
+       <!-- 🔵 Pagination Dots -->
+<div class="sunit"></div>
+
     </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".features");
+  const cards = Array.from(track.children);
+  const dotsContainer = document.querySelector(".sunit");
+
+  // Create dots dynamically
+  cards.forEach((_, index) => {
+    const dot = document.createElement("button");
+    if (index === 0) dot.classList.add("active");
+    dotsContainer.appendChild(dot);
+
+    dot.addEventListener("click", () => {
+      track.scrollTo({
+        left: index * track.offsetWidth,
+        behavior: "smooth"
+      });
+    });
+  });
+
+  const dots = dotsContainer.querySelectorAll("button");
+
+  // Update dots on scroll
+  track.addEventListener("scroll", () => {
+    const index = Math.round(track.scrollLeft / track.offsetWidth);
+    dots.forEach(d => d.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  });
+});
+</script>
 
     <div class="pillars-section">
         <h2>Foundational Pillars of Care</h2>

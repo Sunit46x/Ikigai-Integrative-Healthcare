@@ -956,37 +956,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-{
-document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.querySelector(".testimonial-grid");
-    const cards = document.querySelectorAll(".testimonial-card");
-    const dotsContainer = document.querySelector(".testimonial-dots");
+// const track = document.querySelector(".carousel-track");
+// const dots = document.querySelectorAll(".carousel-dots button");
 
-    // Create dots dynamically
-    cards.forEach((_, i) => {
-      const dot = document.createElement("span");
-      dot.classList.add("dot");
-      if (i === 0) dot.classList.add("active"); // First dot active
-      dotsContainer.appendChild(dot);
+// dots.forEach((dot, index) => {
+//   dot.addEventListener("click", () => {
+//     track.style.transform = `translateX(-${index * 100}%)`;
+//     dots.forEach(d => d.classList.remove("active"));
+//     dot.classList.add("active");
+//   });
+// });
 
-      // Click on dot -> scroll to card
-      dot.addEventListener("click", () => {
-        grid.scrollTo({
-          left: cards[i].offsetLeft,
-          behavior: "smooth",
-        });
-      });
-    });
 
-    const dots = document.querySelectorAll(".testimonial-dots .dot");
+// const track = document.querySelector(".carousel-track");
+// const dots = document.querySelectorAll(".carousel-dots button");
 
-    // Update active dot while scrolling
-    grid.addEventListener("scroll", () => {
-      let index = Math.round(grid.scrollLeft / grid.clientWidth);
-      dots.forEach((d, i) => d.classList.toggle("active", i === index));
-    });
-  });
+// let index = 0;
+// let totalSlides = dots.length;
+// let interval = null;
 
-}
+// // ✅ Function to update slide + dots
+// function updateCarousel() {
+//   track.style.transform = `translateX(-${index * 100}%)`;
+//   dots.forEach((d, i) => d.classList.toggle("active", i === index));
+// }
+
+// // ✅ Dot click handler
+// dots.forEach((dot, i) => {
+//   dot.addEventListener("click", () => {
+//     index = i;
+//     updateCarousel();
+//     resetAutoSlide();
+//   });
+// });
+
+// // ✅ Auto-slide every 4s
+// function autoSlide() {
+//   interval = setInterval(() => {
+//     index = (index + 1) % totalSlides;
+//     updateCarousel();
+//   }, 4000); // 4 seconds
+// }
+
+// // ✅ Reset auto-slide when manually clicked
+// function resetAutoSlide() {
+//   clearInterval(interval);
+//   autoSlide();
+// }
+
+// // ✅ Initialize
+// updateCarousel();
+// autoSlide();
+
 
 
