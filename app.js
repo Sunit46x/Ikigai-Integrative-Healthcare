@@ -955,3 +955,38 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(${-newWidth * currentIndex}px)`;
   });
 });
+
+{
+document.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector(".testimonial-grid");
+    const cards = document.querySelectorAll(".testimonial-card");
+    const dotsContainer = document.querySelector(".testimonial-dots");
+
+    // Create dots dynamically
+    cards.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (i === 0) dot.classList.add("active"); // First dot active
+      dotsContainer.appendChild(dot);
+
+      // Click on dot -> scroll to card
+      dot.addEventListener("click", () => {
+        grid.scrollTo({
+          left: cards[i].offsetLeft,
+          behavior: "smooth",
+        });
+      });
+    });
+
+    const dots = document.querySelectorAll(".testimonial-dots .dot");
+
+    // Update active dot while scrolling
+    grid.addEventListener("scroll", () => {
+      let index = Math.round(grid.scrollLeft / grid.clientWidth);
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+    });
+  });
+
+}
+
+

@@ -763,6 +763,29 @@ a:focus {
   }
 }
 
+@media (max-width: 768px) {
+  .testimonial-dots {
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .testimonial-dots .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+    background: #ccc;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+
+  .testimonial-dots .dot.active {
+    background: #4caf50;
+  }
+}
+
+
 
 .our-story {
   padding: 4rem 8%;
