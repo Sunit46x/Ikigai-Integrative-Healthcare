@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Integrative Medicine Approach for Diet and Lifestyle Diseases</title>
+
+  <!-- Optional: Google Fonts for a clean readable look -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#f7fdf7;
+      --card-bg:#ffffff;
+      --muted:#6b6b6b;
+      --accent:#d35400;
+      --max-width:900px;
+      --radius:14px;
+      --gap:22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 20px;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+    }
+
+    /* page wrapper to center content */
+    .page {
+      width:100%;
+      max-width: calc(var(--max-width) + 40px);
+    }
+
+    /* big card */
+    .big-card{
+      background: linear-gradient(180deg, var(--card-bg) 0%, var(--card-bg) 100%);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(18, 25, 30, 0.08);
+      padding: 28px;
+      margin: 0 auto;
+      max-width: var(--max-width);
+      overflow: auto;
+    }
+
+    /* header area (category / title / date) */
+    .meta {
+      text-align:left;
+      margin-bottom: 18px;
+    }
+
+    .category {
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent);
+      text-transform:uppercase;
+      letter-spacing:0.6px;
+      font-size:13px;
+      margin-bottom:10px;
+    }
+
+    h1 {
+      margin: 6px 0 10px 0;
+      font-family: "Merriweather", "Georgia", serif;
+      font-size: 28px;
+      line-height:1.18;
+      color: #1e2a2a;
+      font-weight:700;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 13px;
+      font-style: italic;
+      margin-top:6px;
+    }
+
+    /* article content */
+    .article {
+      margin-top: 16px;
+      color: #2b2b2b;
+      font-size: 16px;
+      line-height: 1.75;
+      font-weight: 400;
+    }
+
+    .article p { margin: 0 0 16px 0; }
+
+    /* optional subtle left border for visual interest on large screens */
+    @media (min-width: 900px){
+      .big-card{ padding:36px 44px; }
+      .big-card::before{
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .article { font-size: 17px; }
+    }
+
+    /* mobile adjustments */
+    @media (max-width: 600px){
+      body{ padding:20px 12px; }
+      .big-card{ padding:18px; border-radius:12px; }
+      h1{ font-size:22px; }
+      .article { font-size:15px; line-height:1.7; }
+    }
+
+    /* accessibility: focus outline for keyboard users */
+    .big-card:focus-within{
+      outline: 3px solid rgba(211,84,0,0.12);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <article class="big-card" aria-labelledby="post-title" tabindex="0">
+      <header class="meta">
+        <div class="category">Nutrition as the First Line of Therapy</div>
+        <h1 id="post-title">Integrative Medicine Approach for Diet and Lifestyle Diseases</h1>
+        <div class="date">September 15, 2025</div>
+      </header>
+
+      <section class="article" aria-label="Article content">
+        <p>
+          Lifestyle diseases such as obesity, diabetes, hypertension, and cardiovascular conditions are rapidly rising in prevalence across the world. These disorders are strongly linked to diet, sedentary habits, stress, and environmental influences. Conventional medicine has made tremendous advances in diagnosing and managing these diseases, but long term management requires a more comprehensive strategy that goes beyond symptomatic treatment. This is where integrative medicine provides a unique framework.
+        </p>
+
+        <p>
+          Integrative medicine combines the precision of modern science with the holistic perspective of traditional systems like Ayurveda and yoga. The focus is not only on disease control but also on restoring balance, improving resilience, and enhancing overall quality of life. Instead of treating diet and lifestyle as secondary advice, the integrative approach places them at the center of therapy.
+        </p>
+
+        <p>
+          Nutrition is viewed as both prevention and medicine. A tailored diet can regulate blood sugar, reduce systemic inflammation, optimize lipid balance, and support mental health. For example, incorporating high fiber whole grains, seasonal vegetables, and plant based proteins helps stabilize metabolic processes, while avoiding excess processed food, refined sugar, and trans fats lowers the burden on the cardiovascular system. Ayurveda adds another layer of personalization by recommending food choices and timings according to an individual’s prakriti or body constitution.
+        </p>
+
+        <p>
+          Lifestyle modification is equally central. Structured physical activity, whether in the form of yoga, walking, or strength training, improves circulation, insulin sensitivity, and muscle tone. Breathing practices such as pranayama and mindfulness based meditation lower stress hormones, which directly influence metabolic health and cardiovascular risk. Adequate and restorative sleep, often overlooked, is emphasized as an essential pillar of disease prevention.
+        </p>
+
+        <p>
+          Pharmacological therapy and medical interventions are not ignored in integrative medicine. Rather, they are woven into a broader care plan where medicines, diet, exercise, and stress management work together. This reduces dependency on high drug doses over time and lowers the risk of complications. Importantly, the patient is considered an active participant in the healing process, not a passive recipient of treatment.
+        </p>
+
+        <p>
+          As a physician, I have seen that integrative medicine empowers individuals to take charge of their health in a structured and sustainable way. For chronic lifestyle diseases, cure may not always be possible, but control, reversal in early stages, and significant improvement in well being are realistic outcomes. By combining modern evidence with traditional wisdom, integrative medicine brings together the best of both worlds to address one of the most pressing health challenges of our time.
+        </p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
