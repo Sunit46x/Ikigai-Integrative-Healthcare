@@ -274,6 +274,25 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
         </div>
     </footer>
+
+    <script>
+  const toggle = document.querySelector(".nav-toggle");
+const menu = document.querySelector(".nav-menu");
+
+toggle.addEventListener("click", () => {
+  toggle.classList.toggle("active");  // animate 3 lines
+  menu.classList.toggle("active");    // show/hide menu
+});
+
+// Optional: close menu when clicking a link
+document.querySelectorAll(".nav-link").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("active");
+    toggle.classList.remove("active");
+  });
+});
+
+</script>
 </body>
 
 </html>
