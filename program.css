@@ -292,17 +292,18 @@ body {
 
 /* Plan Specific Colors */
 .oppo-platinum .oneplus-header {
-  background: #eee;
+  background: #BCDA56;
+  color: #000000;
 }
 
 .oppo-gold .oneplus-header {
-  background: #fdd835;
-  color: #3a5132;
+  background: #D9B557;
+  color: #000000;
 }
 
 .oppo-lite .oneplus-header {
-  background: #CADCAE;
-  color: #3a5132;
+  background: #aa3f93;
+  color: #000000;
 }
 
 .btn.infinix-platinum {
