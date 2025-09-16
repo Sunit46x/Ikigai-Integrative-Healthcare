@@ -1,13 +1,15 @@
 /* Import Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
+
+
 /* Base Design System Variables */
 :root {
   /* Brand Colors */
-  --color-primary-green: #3B7A57;
+  --color-primary-green: #3a5132;
   --color-accent-beige: #F5F2E7;
   --color-soft-white: #FFFFFF;
-  --color-deep-charcoal: #222222;
+  --color-deep-charcoal: #3a5132;
   --color-muted-gold: #C9A66B;
 
   /* Package Theme Colors */
@@ -22,18 +24,18 @@
   --color-gold-button-hover: #DAA520;
 
   --color-lite-bg: #F5F2E7;
-  --color-lite-accent: #3B7A57;
-  --color-lite-button: #3B7A57;
+  --color-lite-accent: #3a5132;
+  --color-lite-button: #3a5132;
   --color-lite-button-hover: #2A5A42;
 
   /* Semantic Colors */
   --color-text-primary: var(--color-deep-charcoal);
-  --color-text-secondary: #626971;
+  --color-text-secondary: #3a5132;
   --color-background-primary: var(--color-soft-white);
   --color-background-secondary: var(--color-accent-beige);
 
   /* Typography */
-  --font-family-primary: "Quicksand", Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   --font-size-h1: 2.5rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
@@ -89,7 +91,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-family-primary);
+ font-family: 'Montserrat', sans-serif;
   font-size: var(--font-size-body);
   line-height: var(--line-height-base);
   color: var(--color-text-primary);
@@ -99,7 +101,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-primary);
+ font-family: 'Montserrat', sans-serif;
   font-weight: var(--font-weight-semibold);
   line-height: 1.2;
   margin-bottom: var(--space-md);
@@ -294,7 +296,7 @@ a:focus {
   justify-content: center;
   padding: var(--space-sm) var(--space-lg);
   border-radius: var(--radius-md);
-  font-family: var(--font-family-primary);
+   font-family: 'Montserrat', sans-serif;
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
   line-height: 1.5;
@@ -582,7 +584,7 @@ a:focus {
   max-width: 800px;
   margin: 0 auto 3rem;
   font-size: 1rem;
-  color: #333;
+  color: #3a5132;
 }
 
 /* Features Grid - Default (Desktop) */
@@ -614,7 +616,7 @@ a:focus {
 
 .feature p {
   font-size: 0.95rem;
-  color: #444;
+  color: #3a5132;
 }
 
 .feature img {
@@ -705,7 +707,7 @@ a:focus {
   max-width: 800px;
   margin: 0 auto 3rem;
   font-size: 1rem;
-  color: #444;
+  color: #3a5132;
 }
 .testimonial-grid {
   display: grid;
@@ -739,13 +741,13 @@ a:focus {
 .testimonial-card span {
   display: block;
   font-size: 0.9rem;
-  color: #666;
+  color: #3a5132;
   margin-bottom: 1rem;
 }
 
 .testimonial-card p {
   font-size: 0.95rem;
-  color: #333;
+  color: #3a5132;
   text-align: left;
 }
 
@@ -835,12 +837,12 @@ a:focus {
 .our-story p {
   font-size: 1rem;
   margin-bottom: 1.2rem;
-  color: #333;
+  color: #3a5132;
 }
 
 .our-story strong {
   font-weight: 600;
-  color: #000;
+  color: #23311e;
 }
 
 /* Responsive */
@@ -890,7 +892,7 @@ a:focus {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #3b7a57;
+  color: #3a5132;
 }
 
 .founder-text h3 {
@@ -901,14 +903,14 @@ a:focus {
 
 .founder-text .credentials {
   font-size: 0.99rem;
-  color: #666;
+  color: #3a5132;
   margin-bottom: 1.5rem;
   font-style: italic;
 }
 
 .founder-text p {
   font-size: 1rem;
-  color: #333;
+  color: #3a5132;
   margin-bottom: 1rem;
   line-height: 1.6;
 }
@@ -990,7 +992,7 @@ a:focus {
 
 .ferrari-btn {
   display: inline-block;
-  background: #3b7a57;
+  background: #3a5132;
   color: #fff;
   padding: 0.7rem 1.5rem;
   font-size: 0.95rem;
@@ -1022,7 +1024,7 @@ a:focus {
 
 .lamborghini-text p {
   font-size: 1rem;
-  color: #444;
+  color: #3a5132;
 }
 
 .lamborghini-image {
@@ -1053,7 +1055,7 @@ a:focus {
 
 .interest-btn {
   display: inline-block;
-  background: #3b7a57;
+  background: #3a5132;
   color: #fff;
   padding: 0.6rem 1.3rem;
   font-size: 1rem;
@@ -1144,11 +1146,11 @@ a:focus {
 .focus-area-card h3 {
   font-size: 1.15rem;
   margin: 10px 0;
-  color: #2f6d36;
+  color: #3a5132;
 }
 
 .focus-area-card h3 {
-  color: #333;
+  color: #3a5132;
 }
 
 /* Paragraphs */
@@ -1156,7 +1158,7 @@ a:focus {
 .focus-area-card p {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #555;
+  color: #3a5132;
   margin-top: auto;
   /* pushes text evenly if content is shorter */
 }
@@ -1282,7 +1284,7 @@ a:focus {
   font-size: 0.9rem;
   padding: 1.5rem 8%;
   border-top: 1px solid #ddd;
-  color: #000000;
+  color: #3a5132;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1297,21 +1299,21 @@ a:focus {
 }
 
 .porsche-footer a {
-  color: #000;
+  color: #3a5132;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .porsche-footer a:hover {
-  color: #3b7a57;
+  color: #3a5132;
 }
 
 /* Social Media Icons */
 .footer-right a {
   margin-left: 12px;
   font-size: 1.5rem;
-  color: #000000;
+  color: #3a5132;
   transition: all 0.5s ease;
 }
 

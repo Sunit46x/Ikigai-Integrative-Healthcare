@@ -1,16 +1,35 @@
+/* Ensure consistent navbar height */
+:root {
+  --header-height: 70px;
+  --space-sm: 10px;
+  --space-md: 15px;
+  --space-lg: 25px;
+  --radius-sm: 6px;
+  --color-primary-green: #3a5132;
+  --color-text-primary: #3a5132;
+  --color-text-secondary: #3a5132;
+  --color-background-primary: #ffffff;
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+}
 /* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #3a5132;
   background-color: #f7fdf7;
 }
+
+
 
 /* Container */
 .container {
@@ -27,7 +46,7 @@ body {
 .section h2 {
   text-align: center;
   font-size: 2rem;
-  color: #225533;
+  color: #3a5132;
   margin-bottom: 20px;
 }
 
@@ -52,7 +71,7 @@ body {
 .hero-text h1 {
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #225533;
+  color: #3a5132;
 }
 
 .hero-text p {
@@ -75,7 +94,7 @@ body {
 }
 
 .btn--primary {
-  background: #225533;
+  background: #3a5132;
   color: #fff;
 }
 
@@ -85,12 +104,12 @@ body {
 
 .btn--outline {
   background: transparent;
-  border: 2px solid #225533;
-  color: #225533;
+  border: 2px solid #3a5132;
+  color: #3a5132;
 }
 
 .btn--outline:hover {
-  background: #225533;
+  background: #3a5132;
   color: #fff;
 }
 
@@ -173,7 +192,7 @@ body {
 
 .founder-text h3 {
   margin: 8px 0;
-  color: #225533;
+  color: #3a5132;
 }
 
 .credentials {
@@ -278,32 +297,32 @@ body {
 
 .oppo-gold .oneplus-header {
   background: #fdd835;
-  color: #000;
+  color: #3a5132;
 }
 
 .oppo-lite .oneplus-header {
-  background: #2e7d32;
-  color: #fff;
+  background: #CADCAE;
+  color: #3a5132;
 }
 
 .btn.infinix-platinum {
-  background: #999;
-  color: #fff;
+  background: #3a5132;
+  color: #ffffff;
   border: none;
   padding: 12px 25px;
   border-radius: 6px;
 }
 
 .btn.infinix-gold {
-  background: #fdd835;
+  background: #3a5132;
   border: none;
   padding: 12px 25px;
   border-radius: 6px;
-  color: #000;
+  color: #ffffff;
 }
 
 .btn.infinix-lite {
-  background: #2e7d32;
+  background: #3a5132;
   border: none;
   padding: 12px 25px;
   border-radius: 6px;
@@ -330,10 +349,10 @@ body {
 
 /* Footer */
 .porsche-footer {
-  font-size: 0.9rem;
+  -size: 0.9rem;
   padding: 1.5rem 8%;
   border-top: 1px solid #ddd;
-  color: #000000;
+  color: #3a5132;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -348,7 +367,7 @@ body {
 }
 
 .porsche-footer a {
-  color: #000;
+  color: #3a5132;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -362,7 +381,7 @@ body {
 .footer-right a {
   margin-left: 12px;
   font-size: 1.5rem;
-  color: #000000;
+  color: #3a5132;
   transition: all 0.5s ease;
 }
 
