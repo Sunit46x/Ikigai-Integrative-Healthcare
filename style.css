@@ -539,7 +539,7 @@ a:focus {
 
   .hero-buttons .btn {
     width: 100%;
-    max-width: 230px; }
+    max-width: 235px; }
 
   .nav-brand h2 {
     font-size: 1.27rem;
@@ -1199,7 +1199,7 @@ a:focus {
 
   .pillar-card img,
   .focus-area-card img {
-    height: 140px;
+    height:auto;
   }
 }
 
