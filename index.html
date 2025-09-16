@@ -371,7 +371,23 @@
             </div>
         </footer>
 
+<!-- Floating Interest Button -->
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSckyGmyp-u-k-Xwf0Ubj8VICJ2ihzog3gw91J_lxGExECW59Q/viewform"
+   class="floating-btn"
+   target="_blank" 
+   rel="noopener noreferrer">
+   I'm Interested
+</a>
+<script>const floatingBtn = document.querySelector(".floating-btn");
 
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 200) { 
+    floatingBtn.classList.add("show");
+  } else {
+    floatingBtn.classList.remove("show");
+  }
+});
+</script>
     </main>
 
 

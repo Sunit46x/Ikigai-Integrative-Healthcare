@@ -600,3 +600,32 @@ a {
   backdrop-filter: blur(6px);             /* blur effect */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* subtle button shadow */
 }
+/* Floating Button (Mobile Only) */
+.floating-btn {
+  position: fixed;
+  bottom: -60px; /* hidden by default */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #3a5132;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  transition: bottom 0.4s ease;
+  z-index: 999;
+}
+
+/* Show button when active */
+.floating-btn.show {
+  bottom: 20px;
+}
+
+/* Mobile Only */
+@media (min-width: 769px) {
+  .floating-btn {
+    display: none;
+  }
+}
