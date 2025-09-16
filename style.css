@@ -726,7 +726,8 @@ a:focus {
 }
 
 .testimonial-card img {
-  width: 100%;
+  width: auto;
+  height: auto;
   max-width: 225px;
   border-radius: 12px;
   margin: 0 auto 1.2rem;

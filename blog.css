@@ -1,5 +1,5 @@
 /* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@33a5132..700&display=swap');
 
 /* Base Design System Variables */
 :root {
@@ -24,7 +24,7 @@
   --color-lite-bg: #F5F2E7;
   --color-lite-accent: #3B7A57;
   --color-lite-button: #3B7A57;
-  --color-lite-button-hover: #2A5A42;
+  /* --color-lite-button-hover: #2A5A42; */
 
   /* Semantic Colors */
   --color-text-primary: var(--color-deep-charcoal);
@@ -123,11 +123,6 @@ a {
   transition: color var(--transition-fast);
 }
 
-a:hover,
-a:focus {
-  outline: 2px solid green;
-  outline-offset: 2px;
-}
 
 
 
@@ -265,7 +260,16 @@ a:focus {
   transition: all var(--transition-normal);
   border-radius: 1px;
 }
-
+.interest-btn {
+    display: inline-block;
+    background: #3a5132;
+    color: #fff;
+    padding: 0.6rem 1.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+}
 
 
 /* cardd code */
@@ -277,17 +281,33 @@ a:focus {
     }
 
     .blog-header h1 {
-      font-size: 40px;
+      font-size: 35px;
       margin-bottom: 20px;
-      color: #2c3e50;
-      padding-top: 22px;
+      color: #3a5132;
+      padding-top: 30px;
     }
 
     .blog-header p {
       font-size: 16px;
-      color: #555;
+      color: #3a5132;
       line-height: 1.6;
     }
+/* Mobile view (screens 768px and below) */
+@media (max-width: 768px) {
+  .blog-header h1 {
+    font-size: 24px;   /* smaller heading */
+    margin-bottom: 15px;
+    padding-top: 15px;
+    text-align: center; /* optional: center align on mobile */
+  }
+
+  .blog-header p {
+    font-size: 14px;   /* smaller text */
+    line-height: 1.5;
+    text-align: center; /* optional */
+    padding: 5px 15px;   /* give some breathing space */
+  }
+}
 
  .container {
       display: grid;
@@ -314,17 +334,13 @@ a:focus {
 
     .card img {
       width: 100%;
-      height: 200px;
       object-fit: cover;
-     
-    
-    height: auto;
+      height: auto;
     }
+   
+  
 
 
-.card img[alt]::after {
-    content: none;
-}
 
     .card-content {
       padding: 20px;
@@ -343,6 +359,7 @@ a:focus {
       font-size: 20px;
       font-weight: bold;
       margin-bottom: 10px;
+      color: #3a5132;
     }
 
     .card-date {
@@ -377,7 +394,7 @@ a:focus {
   font-size: 0.9rem;
   padding: 1.5rem 8%;
   border-top: 1px solid #ddd;
-  color: #000000;
+  color: #3a5132;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -392,7 +409,7 @@ a:focus {
 }
 
 .porsche-footer a {
-  color: #000;
+  color: #3a5132;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -406,7 +423,7 @@ a:focus {
 .footer-right a {
   margin-left: 12px;
   font-size: 1.5rem;
-  color: #000000;
+  color: #3a5132;
   transition: all 0.5s ease;
 }
 
