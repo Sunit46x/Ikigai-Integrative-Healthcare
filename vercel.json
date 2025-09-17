@@ -2,6 +2,13 @@
   "rewrites": [
     { "source": "/about-us", "destination": "/about.html" },
     { "source": "/program", "destination": "/program.html" },
-    { "source": "/blogs", "destination": "/blog.html" }
+    { "source": "/blogs", "destination": "/blog.html" },
+
+    { "source": "/blog1", "destination": "/blog1.html" },
+    { "source": "/blog2", "destination": "/blog2.html" },
+    { "source": "/blog3", "destination": "/blog3.html" },
+    { "source": "/blog4", "destination": "/blog4.html" },
+    { "source": "/blog5", "destination": "/blog5.html" },
+    { "source": "/blog6", "destination": "/blog6.html" }
   ]
 }
