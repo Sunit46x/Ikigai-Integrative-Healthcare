@@ -7,6 +7,7 @@
   <title>IKIGAI INTEGRATIVE HEALTHCARE</title>
   <!-- stylesheet link here -->
   <link rel="stylesheet" href="./program.css">
+  <link rel="stylesheet" href="style.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,7 +46,188 @@
   </nav>
 
   <!-- Plans Section -->
-  <section id="samsung" class="section">
+  <section class="approach">
+    <h2>Transforming Health Through Integrative Approaches</h2>
+    <p class="subtitle">
+      At Ikigai Integrative Health, we believe in a holistic approach to wellness that nurtures the mind,
+      body, and spirit.<br>
+      Our philosophy centres on empowering individuals to take charge of their health through education and
+      community support.<br>
+      We are dedicated to guiding you on your journey to optimal well-being.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <img src="./images/integrative approches.png" alt="Integrative Approach">
+        <h3>Integrative Approach</h3>
+        <p>Bridging Ayurveda with modern clinical nutrition and behavioral science.</p>
+      </div>
+
+      <div class="feature">
+        <img src="./images/Personalization at the Core.png" alt="Personalization">
+        <h3>Personalization at the Core</h3>
+        <p>Customized solutions, not protocols. Every plan adapts to your constitution, condition, and context.
+        </p>
+      </div>
+
+      <div class="feature">
+        <img src="./images/Sustainable Change.png" alt="Sustainable Change">
+        <h3>Sustainable Change</h3>
+        <p>We build habits, not hacks. Our focus is on lifelong well-being over short-term results.</p>
+      </div>
+
+      <div class="feature">
+        <img src="./images/Therapeutic Nutrition.png" alt="Therapeutic Nutrition">
+        <h3>Therapeutic Nutrition</h3>
+        <p>Food as foundational medicine designed to nourish body, balance metabolism, and restore harmony.</p>
+      </div>
+
+      <div class="feature">
+        <img src="./images/Mind-Body Alignment.png" alt="Mind-Body Alignment">
+        <h3>Mind-Body Alignment</h3>
+        <p>Tools to regulate stress, emotions, and sleep acknowledging their role in weight, hormones, and
+          overall health.</p>
+      </div>
+    </div>
+    <!-- 🔵 Pagination Dots -->
+    <div class="sunit"></div>
+
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector(".features");
+      const cards = Array.from(track.children);
+      const dotsContainer = document.querySelector(".sunit");
+
+      // Create dots dynamically
+      cards.forEach((_, index) => {
+        const dot = document.createElement("button");
+        if (index === 0) dot.classList.add("active");
+        dotsContainer.appendChild(dot);
+
+        dot.addEventListener("click", () => {
+          track.scrollTo({
+            left: index * track.offsetWidth,
+            behavior: "smooth"
+          });
+        });
+      });
+
+      const dots = dotsContainer.querySelectorAll("button");
+
+      // Update dots on scroll
+      track.addEventListener("scroll", () => {
+        const index = Math.round(track.scrollLeft / track.offsetWidth);
+        dots.forEach(d => d.classList.remove("active"));
+        if (dots[index]) dots[index].classList.add("active");
+      });
+    });
+  </script>
+
+  <div class="pillars-section">
+    <h2>Foundational Pillars of Care</h2>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <img src="images/Integrative, Diagnostic-Guided Care.png" alt="Integrative, Diagnostic-Guided Care">
+        <h3>Integrative, Diagnostic-Guided Care</h3>
+        <p>Combining Ayurvedic diagnostics (prakriti-vikriti, agni, ojas) with functional labs (thyroid
+          panels, metabolic profiles, hormone levels) to understand root causes.</p>
+      </div>
+      <div class="pillar-card">
+        <img src="./images/Therapeutic Ayurvedic Nutrition.png" alt="Therapeutic Ayurvedic Nutrition">
+        <h3>Therapeutic Ayurvedic Nutrition</h3>
+        <p>We center Indian foods, dal, roti, ghee, sabji, chutney, adapted therapeutically for hormonal
+          balance, liver detox, gut health, and micronutrient recovery.</p>
+      </div>
+      <div class="pillar-card">
+        <img src="./images/Clinical-Grade Support & Monitoring.png" alt="Clinical-Grade Support & Monitoring">
+        <h3>Clinical-Grade Support & Monitoring</h3>
+        <p>Progress is reviewed using both subjective symptoms (bloating, fatigue, cycle quality) and
+          objective trends (lab values, glucose curves, CRP shifts), with iterative plan updates.</p>
+      </div>
+      <div class="pillar-card">
+        <img src="images/Phase-Specific Female Nutrition.png" alt="Phase-Specific Female Nutrition">
+        <h3>Phase-Specific Female Nutrition</h3>
+        <p>Plans for menstruating women are synchronized with cycle phases, incorporating dosha-specific
+          foods, rasayana during the luteal phase, and agni-supportive strategies during menstruation.
+        </p>
+      </div>
+      <div class="pillar-card">
+        <img src="images/Structured Autonomy-Building.png" alt="Structured Autonomy-Building">
+        <h3>Structured Autonomy-Building</h3>
+        <p>Our phased model transitions clients from guided healing to internalized,
+          constitution-aligned lifestyle maintenance.</p>
+      </div>
+      <div class="pillar-card">
+        <img src="images/Deep Personalization Beyond.png" alt="Deep Personalization Beyond Templates">
+        <h3>Deep Personalization Beyond Templates</h3>
+        <p>All meal plans and interventions are personalized daily, aligned to symptom progression,
+          cycle phase, digestive tolerance, stress levels, and seasonal transitions.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Carousel styles for mobile view */
+    @media (max-width: 768px) {
+      .nokia-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        /* Hide scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+      }
+      .nokia-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+      }
+
+      .xiaomi-card {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+      }
+    }
+
+    .carousel-dots-samsung {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .carousel-dots-samsung button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: #ccc;
+      cursor: pointer;
+      margin: 0 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .carousel-dots-samsung button.active {
+      background-color: #3a5132; /* Active dot color */
+    }
+
+    /* Hide dots on larger screens */
+    @media (min-width: 769px) {
+      .carousel-dots-samsung {
+        display: none;
+      }
+    }
+
+    /* Ensure grid behavior on desktop */
+    @media (min-width: 769px) {
+      .nokia-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      }
+    }
+  </style>
+
+  <section id="samsung">
     <div class="container">
       <div class="apple-hero">
         <h2>Choose Your Healing Journey</h2>
@@ -175,98 +357,100 @@
 
         </div>
       </div>
+      <!-- Dots for the carousel -->
+      <div class="carousel-dots-samsung"></div>
       <!-- ✅ Uiverse.io Button CSS -->
-<style>
-.buttonDownload {
-  display: inline-block;
-  position: relative;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background-color: #3a5132;
-  color: white;
-  font-family: sans-serif;
-  text-decoration: none;
-  font-size: 0.9em;
-  text-align: center;
-  text-indent: 15px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-}
+      <style>
+        .buttonDownload {
+          display: inline-block;
+          position: relative;
+          margin-top: 20px;
+          padding: 12px 25px;
+          background-color: #3a5132;
+          color: white;
+          font-family: sans-serif;
+          text-decoration: none;
+          font-size: 0.9em;
+          text-align: center;
+          text-indent: 15px;
+          border: none;
+          cursor: pointer;
+          border-radius: 10px;
+        }
 
-.buttonDownload:hover {
-  background-color: #4a6840;
-  color: white;
-}
+        .buttonDownload:hover {
+          background-color: #4a6840;
+          color: white;
+        }
 
-.buttonDownload:before,
-.buttonDownload:after {
-  content: ' ';
-  display: block;
-  position: absolute;
-  left: 15px;
-  top: 52%;
-}
+        .buttonDownload:before,
+        .buttonDownload:after {
+          content: ' ';
+          display: block;
+          position: absolute;
+          left: 15px;
+          top: 52%;
+        }
 
-.buttonDownload:before {
-  width: 10px;
-  height: 2px;
-  border-style: solid;
-  border-width: 0 2px 2px;
-}
+        .buttonDownload:before {
+          width: 10px;
+          height: 2px;
+          border-style: solid;
+          border-width: 0 2px 2px;
+        }
 
-.buttonDownload:after {
-  width: 0;
-  height: 0;
-  margin-left: 3px;
-  margin-top: -7px;
-  border-style: solid;
-  border-width: 4px 4px 0 4px;
-  border-color: transparent;
-  border-top-color: inherit;
-  animation: downloadArrow 1s linear infinite;
-  animation-play-state: paused;
-}
+        .buttonDownload:after {
+          width: 0;
+          height: 0;
+          margin-left: 3px;
+          margin-top: -7px;
+          border-style: solid;
+          border-width: 4px 4px 0 4px;
+          border-color: transparent;
+          border-top-color: inherit;
+          animation: downloadArrow 1s linear infinite;
+          animation-play-state: paused;
+        }
 
-.buttonDownload:hover:before {
-  border-color: #cdefbd;
-}
+        .buttonDownload:hover:before {
+          border-color: #cdefbd;
+        }
 
-.buttonDownload:hover:after {
-  border-top-color: #cdefbd;
-  animation-play-state: running;
-}
+        .buttonDownload:hover:after {
+          border-top-color: #cdefbd;
+          animation-play-state: running;
+        }
 
-@keyframes downloadArrow {
-  0% {
-    margin-top: -7px;
-    opacity: 1;
-  }
+        @keyframes downloadArrow {
+          0% {
+            margin-top: -7px;
+            opacity: 1;
+          }
 
-  0.001% {
-    margin-top: -15px;
-    opacity: 0.4;
-  }
+          0.001% {
+            margin-top: -15px;
+            opacity: 0.4;
+          }
 
-  50% {
-    opacity: 1;
-  }
+          50% {
+            opacity: 1;
+          }
 
-  100% {
-    margin-top: 0;
-    opacity: 0.4;
-  }
-}
-</style>
+          100% {
+            margin-top: 0;
+            opacity: 0.4;
+          }
+        }
+      </style>
 
-<!-- ✅ Updated HTML -->
-<div class="zte-button-wrapper">
-  <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
-    <button class="buttonDownload" aria-label="Download Ikigai Brochure">
-      <b>Ikigai Brochure</b>
-    </button>
-  </a>
-</div>
+      <!-- ✅ Updated HTML -->
+      <div class="zte-button-wrapper">
+        <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
+          <button class="buttonDownload" aria-label="Download Ikigai Brochure">
+            <b>Ikigai Brochure</b>
+          </button>
+        </a>
+      </div>
 
     </div>
   </section>
@@ -314,6 +498,40 @@
       } else {
         floatingBtn.classList.remove("show");
       }
+    });
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const track = document.querySelector("#samsung .nokia-grid");
+      const cards = Array.from(track.children);
+      const dotsContainer = document.querySelector(".carousel-dots-samsung");
+
+      if (!track || !dotsContainer) return;
+
+      // Create dots dynamically
+      cards.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        if (index === 0) dot.classList.add("active");
+        dotsContainer.appendChild(dot);
+
+        dot.addEventListener("click", () => {
+          track.scrollTo({
+            left: index * track.offsetWidth,
+            behavior: "smooth"
+          });
+        });
+      });
+
+      const dots = dotsContainer.querySelectorAll("button");
+
+      // Update dots on scroll
+      track.addEventListener("scroll", () => {
+        // A small tolerance is added to handle rounding issues
+        const index = Math.round(track.scrollLeft / (track.scrollWidth / cards.length));
+        dots.forEach(d => d.classList.remove("active"));
+        if (dots[index]) dots[index].classList.add("active");
+      });
     });
   </script>
 </body>

@@ -21,6 +21,9 @@
   box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+#samsung{
+  background-color: #f7fdf7;
+}
 
 body {
    font-family: 'Montserrat', sans-serif;
@@ -525,7 +528,6 @@ body {
   color: var(--color-primary-green);
   background-color: rgba(59, 122, 87, 0.1);
 }
-
 
 
 
