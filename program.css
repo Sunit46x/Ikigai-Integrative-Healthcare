@@ -476,7 +476,7 @@ body {
 
 @media (max-width: 768px) {
   .nav-brand h2 {
-    font-size: 1.2rem;
+    font-size: 1.27rem;
   }
 }
 
@@ -526,10 +526,9 @@ body {
   background-color: rgba(59, 122, 87, 0.1);
 }
 
-.nav-link:focus {
-  outline: 2px solid var(--color-primary-green);
-  outline-offset: 2px;
-}
+
+
+
 
 .nav-toggle {
   display: none;
@@ -629,3 +628,5 @@ a {
     display: none;
   }
 }
+
+

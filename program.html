@@ -83,20 +83,16 @@
               </ul>
             </div>
           </div>
-          <div class="zte-button-wrapper">
+          <!-- <div class="zte-button-wrapper">
             <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
-              <button 
-  class="btn infinix-gold" 
-  style="cursor: pointer;" 
-  data-section="contact" 
-  aria-label="Download Ikigai Brochure"
-  onclick="window.location.href='./images/IKIGAI HEALTHCARE BROCHURE.pdf'"
->
-  <b>Ikigai Brochure</b>
-</button>
+              <button class="btn infinix-gold" style="cursor: pointer;" data-section="contact"
+                aria-label="Download Ikigai Brochure"
+                onclick="window.location.href='./images/IKIGAI HEALTHCARE BROCHURE.pdf'">
+                <b>Ikigai Brochure</b>
+              </button>
 
             </a>
-          </div>
+          </div> -->
 
         </div>
 
@@ -127,19 +123,15 @@
               </ul>
             </div>
           </div>
-          <div class="zte-button-wrapper">
+          <!-- <div class="zte-button-wrapper">
             <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
-              <button 
-  class="btn infinix-gold" 
-  style="cursor: pointer;" 
-  data-section="contact" 
-  aria-label="Download Ikigai Brochure"
->
-  <b>Ikigai Brochure</b>
-</button>
+              <button class="btn infinix-gold" style="cursor: pointer;" data-section="contact"
+                aria-label="Download Ikigai Brochure">
+                <b>Ikigai Brochure</b>
+              </button>
 
             </a>
-          </div>
+          </div> -->
 
         </div>
 
@@ -170,23 +162,112 @@
               </ul>
             </div>
           </div>
-          <div class="zte-button-wrapper">
+          <!-- <div class="zte-button-wrapper">
             <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
-              <button 
-  class="btn infinix-gold" 
-  style="cursor: pointer;" 
-  data-section="contact" 
-  aria-label="Download Ikigai Brochure"
-  onclick="window.location.href='./images/IKIGAI HEALTHCARE BROCHURE.pdf'"
->
-  <b>Ikigai Brochure</b>
-</button>
+              <button class="btn infinix-gold" style="cursor: pointer;" data-section="contact"
+                aria-label="Download Ikigai Brochure"
+                onclick="window.location.href='./images/IKIGAI HEALTHCARE BROCHURE.pdf'">
+                <b>Ikigai Brochure</b>
+              </button>
 
             </a>
-          </div>
+          </div> -->
 
         </div>
       </div>
+      <!-- ✅ Uiverse.io Button CSS -->
+<style>
+.buttonDownload {
+  display: inline-block;
+  position: relative;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #3a5132;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  text-indent: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.buttonDownload:hover {
+  background-color: #4a6840;
+  color: white;
+}
+
+.buttonDownload:before,
+.buttonDownload:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 52%;
+}
+
+.buttonDownload:before {
+  width: 10px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+}
+
+.buttonDownload:after {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  margin-top: -7px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+  border-color: #cdefbd;
+}
+
+.buttonDownload:hover:after {
+  border-top-color: #cdefbd;
+  animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+  0% {
+    margin-top: -7px;
+    opacity: 1;
+  }
+
+  0.001% {
+    margin-top: -15px;
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 0.4;
+  }
+}
+</style>
+
+<!-- ✅ Updated HTML -->
+<div class="zte-button-wrapper">
+  <a href="./images/IKIGAI HEALTHCARE BROCHURE.pdf" download="Ikigai-Brochure.pdf">
+    <button class="buttonDownload" aria-label="Download Ikigai Brochure">
+      <b>Ikigai Brochure</b>
+    </button>
+  </a>
+</div>
+
     </div>
   </section>
   <footer class="porsche-footer">
@@ -203,40 +284,38 @@
     </div>
   </footer>
 
-<script>
-  const toggle = document.querySelector(".nav-toggle");
-const menu = document.querySelector(".nav-menu");
+  <script>
+    const toggle = document.querySelector(".nav-toggle");
+    const menu = document.querySelector(".nav-menu");
 
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");  // animate 3 lines
-  menu.classList.toggle("active");    // show/hide menu
-});
+    toggle.addEventListener("click", () => {
+      toggle.classList.toggle("active");  // animate 3 lines
+      menu.classList.toggle("active");    // show/hide menu
+    });
 
-// Optional: close menu when clicking a link
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("active");
-    toggle.classList.remove("active");
-  });
-});
+    // Optional: close menu when clicking a link
+    document.querySelectorAll(".nav-link").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("active");
+        toggle.classList.remove("active");
+      });
+    });
 
-</script>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSckyGmyp-u-k-Xwf0Ubj8VICJ2ihzog3gw91J_lxGExECW59Q/viewform"
-   class="floating-btn"
-   target="_blank" 
-   rel="noopener noreferrer">
-   Prakriti Parikshan
-</a>
-<script>const floatingBtn = document.querySelector(".floating-btn");
+  </script>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSckyGmyp-u-k-Xwf0Ubj8VICJ2ihzog3gw91J_lxGExECW59Q/viewform"
+    class="floating-btn" target="_blank" rel="noopener noreferrer">
+    Prakriti Parikshan
+  </a>
+  <script>const floatingBtn = document.querySelector(".floating-btn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 200) { 
-    floatingBtn.classList.add("show");
-  } else {
-    floatingBtn.classList.remove("show");
-  }
-});
-</script>
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 200) {
+        floatingBtn.classList.add("show");
+      } else {
+        floatingBtn.classList.remove("show");
+      }
+    });
+  </script>
 </body>
 
 </html>
